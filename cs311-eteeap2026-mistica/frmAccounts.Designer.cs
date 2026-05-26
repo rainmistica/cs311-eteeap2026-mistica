@@ -147,6 +147,7 @@
             this.Controls.Add(this.btnsearch);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts Management";

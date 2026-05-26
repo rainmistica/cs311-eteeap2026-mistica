@@ -104,7 +104,7 @@ namespace cs311_eteeap2026_mistica
                         if (updateaccount.rowAffected > 0)
                         {
                             MessageBox.Show("Account updated.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            updateaccount.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, performedto, performedby) VALUES ('" + DateTime.Now.ToString("dd/MM/yyyy") + "', '" +
+                            updateaccount.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, performedto, performedby) VALUES ('" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" +
                                 DateTime.Now.ToShortTimeString() + "', 'UPDATE ACCOUNT', 'ACCOUNTS MANAGEMENT', '" + txtusername.Text + "', '" + username + "')");
                             this.Close();
                         }

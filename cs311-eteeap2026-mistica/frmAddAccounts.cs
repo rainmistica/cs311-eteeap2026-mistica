@@ -98,5 +98,10 @@ namespace cs311_eteeap2026_mistica
             txtpassword.Clear();
             cmbusertype.SelectedIndex = -1;
         }
+
+        private void frmAddAccounts_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAssetNumber = new System.Windows.Forms.TextBox();
             this.txtSerialNumber = new System.Windows.Forms.TextBox();
@@ -42,7 +43,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.Branch = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,18 +92,17 @@
             // 
             // cmbType
             // 
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Items.AddRange(new object[] {
-            "Laptop",
-            "Desktop PC",
             "Monitor",
-            "Mouse",
+            "CPU",
             "Keyboard",
+            "Mouse",
+            "AVR",
+            "MAC",
             "Printer",
-            "Projector",
-            "UPS / Power Supply",
-            "Network Switch",
-            "External Hard Drive"});
+            "Projector"});
             this.cmbType.Location = new System.Drawing.Point(120, 70);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(216, 21);
@@ -124,9 +127,11 @@
             // txtYearModel
             // 
             this.txtYearModel.Location = new System.Drawing.Point(120, 123);
+            this.txtYearModel.MaxLength = 4;
             this.txtYearModel.Name = "txtYearModel";
             this.txtYearModel.Size = new System.Drawing.Size(216, 20);
             this.txtYearModel.TabIndex = 10;
+            this.txtYearModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYearModel_KeyPress);
             // 
             // label5
             // 
@@ -156,6 +161,7 @@
             // 
             // cmbDepartment
             // 
+            this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.FormattingEnabled = true;
             this.cmbDepartment.Items.AddRange(new object[] {
             "Allied Medical Services",
@@ -182,19 +188,37 @@
             this.Branch.TabIndex = 13;
             this.Branch.Text = "Department Branch";
             // 
-            // textBox1
+            // btnSave
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 335);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(8, 20);
-            this.textBox1.TabIndex = 15;
+            this.btnSave.Location = new System.Drawing.Point(18, 293);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(144, 23);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(186, 293);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(150, 23);
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 477);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(372, 327);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.Branch);
             this.Controls.Add(this.txtDescription);
@@ -209,8 +233,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAssetNumber);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddEquipment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Equipment";
+            this.Load += new System.EventHandler(this.frmAddEquipment_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,6 +260,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.Label Branch;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

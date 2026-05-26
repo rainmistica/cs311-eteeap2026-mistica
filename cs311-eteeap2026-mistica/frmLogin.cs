@@ -26,7 +26,7 @@ namespace cs311_eteeap2026_mistica
                 if (dt.Rows.Count > 0)
                 {
                     var mainform = new frmMain(txtUsername.Text, dt.Rows[0].Field<string>("usertype"));
-                    mainform.Show();
+                    mainform.ShowDialog();
                     this.Hide();
                 }
                 else
@@ -60,6 +60,11 @@ namespace cs311_eteeap2026_mistica
             txtUsername.Clear();
             txtPassword.Clear();
             txtUsername.Focus();
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -159,9 +159,11 @@
             this.Controls.Add(this.cbshow);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtusername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add new account";
+            this.Load += new System.EventHandler(this.frmAddAccounts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

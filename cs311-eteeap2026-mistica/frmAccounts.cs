@@ -57,14 +57,13 @@ namespace cs311_eteeap2026_mistica
 
         private void btnrefresh_Click(object sender, EventArgs e)
         {
-            txtsearch.Clear();
-            frmAccounts_Load(sender, e);
+            RefreshView(sender,e);
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
             var addaccountform = new frmAddAccounts(username);
-            addaccountform.Show();
+            addaccountform.ShowDialog();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -88,8 +87,11 @@ namespace cs311_eteeap2026_mistica
                     accounts.executeSQL("DELETE FROM tblaccounts WHERE username = '" + dataGridView1.Rows[row].Cells[0].Value.ToString() + "'");
                     if (accounts.rowAffected > 0)
                     {
-                        accounts.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, performedto, performedby) VALUES ('" + DateTime.Now.ToString("dd/MM/yyyy") + "', '" +
-                            DateTime.Now.ToShortTimeString() + "', 'DELETE ACCOUNT', 'ACCOUNTS MANAGEMENT', '" + dataGridView1.Rows[row].Cells[0].Value.ToString() + "', '" + username + "')");
+                        accounts.executeSQL("INSERT INTO tbllogs (datelog, timelog, action, module, performedto, performedby) VALUES ('" +
+                        DateTime.Now.ToString("yyyy-MM-dd") + "', '" + DateTime.Now.ToShortTimeString() + "', 'DELETE ACCOUNT', 'ACCOUNTS MANAGEMENT', '" +
+                        dataGridView1.Rows[row].Cells[0].Value.ToString() + "', '" +
+                        username + "')");
+
                         MessageBox.Show("Account deleted.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Refresh();
                     }
@@ -108,10 +110,10 @@ namespace cs311_eteeap2026_mistica
             string editusertype = dataGridView1.Rows[row].Cells[2].Value.ToString();
             string editstatus = dataGridView1.Rows[row].Cells[3].Value.ToString();
             var updateaccountform = new frmUpdateAccounts(editusername, editpassword, editusertype, editstatus, username);
-            updateaccountform.Show();
+            updateaccountform.ShowDialog();
         }
 
-        private void Refresh(object sender, EventArgs e)
+        private void RefreshView(object sender, EventArgs e)
         {
             txtsearch.Clear();
             frmAccounts_Load(sender, e);

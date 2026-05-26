@@ -174,6 +174,7 @@
             this.Controls.Add(this.chkshow);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtusername);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmUpdateAccounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update account";
