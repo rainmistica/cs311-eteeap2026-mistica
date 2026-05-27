@@ -34,8 +34,8 @@ namespace cs311_eteeap2026_mistica
             if (dr == DialogResult.Yes)
             {
                 var loginform = new frmLogin();
-                loginform.ShowDialog();
-                this.Close();
+                loginform.Show();
+                this.Hide();
             }
         }
 
@@ -73,11 +73,13 @@ namespace cs311_eteeap2026_mistica
             {
                 accountsToolStripMenuItem.Visible = true;
                 equipmentsToolStripMenuItem.Visible = true;
+                viewLogsToolStripMenuItem.Visible = true;
             }
             else
             {
                 accountsToolStripMenuItem.Visible = false;
                 equipmentsToolStripMenuItem.Visible = true;
+                viewLogsToolStripMenuItem.Visible = false;
             }
         }
     }

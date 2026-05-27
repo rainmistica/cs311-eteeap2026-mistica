@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Org.BouncyCastle.Asn1.Cmp;
 using ticket_management;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace cs311_eteeap2026_mistica
@@ -27,6 +28,12 @@ namespace cs311_eteeap2026_mistica
 
         private int errorcount;
         Class1 updateEquipment = new Class1("127.0.0.1", "itc127-eteeap2026-mistica", "root", "");
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public frmUpdateEquipment(string assetNumber, string serialNumber, string type, string manufacturer, string yearModel, string description, string department, string status, string username)
         {
             InitializeComponent();
@@ -104,8 +111,20 @@ namespace cs311_eteeap2026_mistica
                     errorcount++;
                 }
 
+                var radioButtons = new[] { rbWorking, rbOnRepair, rbRetired };
+
+                if (!radioButtons.Any(rb => rb.Checked))
+                {
+                    MessageBox.Show("Please select at least one Status.", "Reminder",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
                 ValidateDataUniqueness($"SELECT * FROM equipments WHERE serial_number = '{txtSerialNumber.Text}'",
-                    txtSerialNumber, "SerialNumber");
+                    lblAssetNumber.Text,
+                    txtSerialNumber,
+                    "SerialNumber");
 
                 if (errorcount == 0)
                 {
@@ -159,11 +178,11 @@ namespace cs311_eteeap2026_mistica
             lblDepartment.Text = _department;
             lblStatus.Text = _status;
         }
-        private void ValidateDataUniqueness(string query, TextBox textbox, string field)
+        private void ValidateDataUniqueness(string query,string assetNumber, TextBox textbox, string field)
         {
             try
             {
-                if (IsDataExisting(query))
+                if (IsDataExisting(query,assetNumber))
                 {
                     errorProvider1.SetError(textbox, $"{field} is already in use.");
                     errorcount++;
@@ -177,12 +196,21 @@ namespace cs311_eteeap2026_mistica
 
 
         //Helper methods
-        private bool IsDataExisting(string query)
+        private bool IsDataExisting(string query,string assetNumber)
         {
             DataTable dt = updateEquipment.GetData(query);
             if (dt.Rows.Count > 0)
             {
-                return true;
+                var assetNum = dt.Rows[0]["asset_number"].ToString();
+                if(String.Equals(assetNum, assetNumber,StringComparison.OrdinalIgnoreCase))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+                    
             }
             return false;
         }

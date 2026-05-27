@@ -151,7 +151,7 @@ namespace cs311_eteeap2026_mistica
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
