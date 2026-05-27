@@ -7,17 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using ticket_management;
 
 namespace cs311_eteeap2026_mistica
 {
-    public partial class frmAccounts : Form
+    public partial class frmAccounts : MaterialForm
     {
         private string username;
         private int row;
         public frmAccounts(string username)
         {
             InitializeComponent();
+            ThemeManager.Apply(this);
             this.username = username;
         }
         Class1 accounts = new Class1("127.0.0.1", "itc127-eteeap2026-mistica", "root", "");

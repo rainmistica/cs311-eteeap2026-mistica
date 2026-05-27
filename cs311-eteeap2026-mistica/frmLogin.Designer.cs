@@ -39,7 +39,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(72, 106);
+            this.btnLogin.Location = new System.Drawing.Point(106, 156);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(98, 29);
             this.btnLogin.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 27);
+            this.label1.Location = new System.Drawing.Point(95, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 52);
+            this.label2.Location = new System.Drawing.Point(95, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(176, 106);
+            this.btnClear.Location = new System.Drawing.Point(210, 156);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(98, 29);
             this.btnClear.TabIndex = 3;
@@ -77,14 +77,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(120, 24);
+            this.txtUsername.Location = new System.Drawing.Point(154, 74);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(170, 20);
             this.txtUsername.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(120, 49);
+            this.txtPassword.Location = new System.Drawing.Point(154, 99);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(170, 20);
@@ -93,7 +93,7 @@
             // cbShow
             // 
             this.cbShow.AutoSize = true;
-            this.cbShow.Location = new System.Drawing.Point(188, 75);
+            this.cbShow.Location = new System.Drawing.Point(222, 125);
             this.cbShow.Name = "cbShow";
             this.cbShow.Size = new System.Drawing.Size(102, 17);
             this.cbShow.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 167);
+            this.ClientSize = new System.Drawing.Size(440, 201);
             this.Controls.Add(this.cbShow);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -118,6 +118,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form - Inventory Management System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 using ticket_management;
 
 namespace cs311_eteeap2026_mistica
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : MaterialForm
     {
         public frmLogin()
         {
             InitializeComponent();
+
+            ThemeManager.Apply(this);
         }
         Class1 login = new Class1("127.0.0.1", "itc127-eteeap2026-mistica", "root","");
         private void btnLogin_Click(object sender, EventArgs e)
@@ -66,6 +70,11 @@ namespace cs311_eteeap2026_mistica
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

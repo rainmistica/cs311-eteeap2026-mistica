@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using K4os.Compression.LZ4.Streams;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace cs311_eteeap2026_mistica
 {
-    public partial class frmMain : Form
+    public partial class frmMain : MaterialForm
     {
         private readonly string _username, _usertype;
         public frmMain(string username, string usertype)
@@ -20,6 +13,8 @@ namespace cs311_eteeap2026_mistica
             InitializeComponent();
             _username = username;
             _usertype = usertype;
+
+            ThemeManager.Apply(this);
         }
 
         private void accountsToolStripMenuItem_Click(object sender, EventArgs e)
