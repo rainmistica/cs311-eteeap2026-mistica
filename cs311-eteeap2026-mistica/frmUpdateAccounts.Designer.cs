@@ -46,7 +46,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 126);
+            this.label4.Location = new System.Drawing.Point(25, 168);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
@@ -61,7 +61,7 @@
             this.cmbstatus.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.cmbstatus.Location = new System.Drawing.Point(99, 119);
+            this.cmbstatus.Location = new System.Drawing.Point(95, 161);
             this.cmbstatus.Margin = new System.Windows.Forms.Padding(2);
             this.cmbstatus.Name = "cmbstatus";
             this.cmbstatus.Size = new System.Drawing.Size(212, 21);
@@ -70,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 101);
+            this.label3.Location = new System.Drawing.Point(25, 143);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 56);
+            this.label2.Location = new System.Drawing.Point(22, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
@@ -90,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 31);
+            this.label1.Location = new System.Drawing.Point(22, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
@@ -106,7 +106,7 @@
             "Administrator",
             "Technical",
             "User"});
-            this.cmbusertype.Location = new System.Drawing.Point(99, 95);
+            this.cmbusertype.Location = new System.Drawing.Point(95, 137);
             this.cmbusertype.Margin = new System.Windows.Forms.Padding(2);
             this.cmbusertype.Name = "cmbusertype";
             this.cmbusertype.Size = new System.Drawing.Size(212, 21);
@@ -115,7 +115,7 @@
             // btnsave
             // 
             this.btnsave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsave.Location = new System.Drawing.Point(190, 196);
+            this.btnsave.Location = new System.Drawing.Point(186, 238);
             this.btnsave.Margin = new System.Windows.Forms.Padding(2);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(113, 35);
@@ -128,7 +128,7 @@
             // 
             this.chkshow.AutoSize = true;
             this.chkshow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkshow.Location = new System.Drawing.Point(216, 74);
+            this.chkshow.Location = new System.Drawing.Point(212, 116);
             this.chkshow.Margin = new System.Windows.Forms.Padding(2);
             this.chkshow.Name = "chkshow";
             this.chkshow.Size = new System.Drawing.Size(102, 17);
@@ -139,7 +139,7 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(99, 51);
+            this.txtpassword.Location = new System.Drawing.Point(95, 93);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
@@ -148,7 +148,7 @@
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(99, 28);
+            this.txtusername.Location = new System.Drawing.Point(95, 70);
             this.txtusername.Margin = new System.Windows.Forms.Padding(2);
             this.txtusername.Name = "txtusername";
             this.txtusername.ReadOnly = true;

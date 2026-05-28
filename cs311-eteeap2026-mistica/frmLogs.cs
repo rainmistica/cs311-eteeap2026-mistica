@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using ticket_management;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace cs311_eteeap2026_mistica
 {
-    public partial class frmLogs : Form
+    public partial class frmLogs : MaterialForm
     {
         private readonly string _username;
         Class1 logs = new Class1("127.0.0.1", "itc127-eteeap2026-mistica", "root", "");
@@ -20,6 +21,7 @@ namespace cs311_eteeap2026_mistica
         {
             InitializeComponent();
             _username = username;
+            ThemeManager.Apply(this);
         }
 
         private void frmLogs_Load(object sender, EventArgs e)

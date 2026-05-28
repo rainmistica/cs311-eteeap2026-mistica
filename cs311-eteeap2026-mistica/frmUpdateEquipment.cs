@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using Org.BouncyCastle.Asn1.Cmp;
 using ticket_management;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
@@ -14,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace cs311_eteeap2026_mistica
 {
-    public partial class frmUpdateEquipment : Form
+    public partial class frmUpdateEquipment : MaterialForm
     {
         private string _assetNumber, _serialNumber, _type, _manufacturer, _yearModel, _description,_department,_status, _username;
 
@@ -37,6 +38,7 @@ namespace cs311_eteeap2026_mistica
         public frmUpdateEquipment(string assetNumber, string serialNumber, string type, string manufacturer, string yearModel, string description, string department, string status, string username)
         {
             InitializeComponent();
+            ThemeManager.Apply(this);
             _assetNumber = assetNumber;
             _serialNumber = serialNumber;
             _type = type;

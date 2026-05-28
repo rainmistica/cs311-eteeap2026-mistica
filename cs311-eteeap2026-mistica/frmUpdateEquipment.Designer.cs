@@ -63,7 +63,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(45, 438);
+            this.btnSave.Location = new System.Drawing.Point(46, 494);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(124, 23);
             this.btnSave.TabIndex = 31;
@@ -86,7 +86,7 @@
             "Criminal Justice",
             "Accountancy",
             "Information Technology"});
-            this.cmbDepartment.Location = new System.Drawing.Point(131, 297);
+            this.cmbDepartment.Location = new System.Drawing.Point(132, 353);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(216, 21);
             this.cmbDepartment.TabIndex = 30;
@@ -94,7 +94,7 @@
             // Branch
             // 
             this.Branch.AutoSize = true;
-            this.Branch.Location = new System.Drawing.Point(26, 279);
+            this.Branch.Location = new System.Drawing.Point(27, 335);
             this.Branch.Name = "Branch";
             this.Branch.Size = new System.Drawing.Size(99, 13);
             this.Branch.TabIndex = 29;
@@ -102,7 +102,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(131, 169);
+            this.txtDescription.Location = new System.Drawing.Point(132, 225);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(216, 101);
@@ -111,7 +111,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 172);
+            this.label6.Location = new System.Drawing.Point(27, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 27;
@@ -119,7 +119,7 @@
             // 
             // txtYearModel
             // 
-            this.txtYearModel.Location = new System.Drawing.Point(131, 143);
+            this.txtYearModel.Location = new System.Drawing.Point(132, 199);
             this.txtYearModel.MaxLength = 4;
             this.txtYearModel.Name = "txtYearModel";
             this.txtYearModel.Size = new System.Drawing.Size(216, 20);
@@ -129,7 +129,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 146);
+            this.label5.Location = new System.Drawing.Point(27, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 25;
@@ -137,7 +137,7 @@
             // 
             // txtManufacturer
             // 
-            this.txtManufacturer.Location = new System.Drawing.Point(131, 117);
+            this.txtManufacturer.Location = new System.Drawing.Point(132, 173);
             this.txtManufacturer.Name = "txtManufacturer";
             this.txtManufacturer.Size = new System.Drawing.Size(216, 20);
             this.txtManufacturer.TabIndex = 24;
@@ -145,7 +145,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 120);
+            this.label4.Location = new System.Drawing.Point(27, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 23;
@@ -154,7 +154,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 69);
+            this.label3.Location = new System.Drawing.Point(27, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 21;
@@ -162,7 +162,7 @@
             // 
             // txtSerialNumber
             // 
-            this.txtSerialNumber.Location = new System.Drawing.Point(131, 40);
+            this.txtSerialNumber.Location = new System.Drawing.Point(132, 96);
             this.txtSerialNumber.Name = "txtSerialNumber";
             this.txtSerialNumber.Size = new System.Drawing.Size(216, 20);
             this.txtSerialNumber.TabIndex = 20;
@@ -170,7 +170,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 43);
+            this.label2.Location = new System.Drawing.Point(27, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 19;
@@ -179,7 +179,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 17);
+            this.label1.Location = new System.Drawing.Point(27, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 17;
@@ -188,7 +188,7 @@
             // lblAssetNumber
             // 
             this.lblAssetNumber.AutoSize = true;
-            this.lblAssetNumber.Location = new System.Drawing.Point(128, 17);
+            this.lblAssetNumber.Location = new System.Drawing.Point(129, 73);
             this.lblAssetNumber.Name = "lblAssetNumber";
             this.lblAssetNumber.Size = new System.Drawing.Size(0, 13);
             this.lblAssetNumber.TabIndex = 32;
@@ -206,7 +206,7 @@
             "MAC",
             "Printer",
             "Projector"});
-            this.cmbType.Location = new System.Drawing.Point(131, 90);
+            this.cmbType.Location = new System.Drawing.Point(132, 146);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(216, 21);
             this.cmbType.TabIndex = 22;
@@ -214,7 +214,7 @@
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(134, 69);
+            this.lblType.Location = new System.Drawing.Point(135, 125);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(0, 13);
             this.lblType.TabIndex = 33;
@@ -222,7 +222,7 @@
             // lblDepartment
             // 
             this.lblDepartment.AutoSize = true;
-            this.lblDepartment.Location = new System.Drawing.Point(131, 279);
+            this.lblDepartment.Location = new System.Drawing.Point(132, 335);
             this.lblDepartment.Name = "lblDepartment";
             this.lblDepartment.Size = new System.Drawing.Size(0, 13);
             this.lblDepartment.TabIndex = 34;
@@ -230,7 +230,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 329);
+            this.label7.Location = new System.Drawing.Point(30, 385);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 35;
@@ -239,7 +239,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(134, 329);
+            this.lblStatus.Location = new System.Drawing.Point(135, 385);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(0, 13);
             this.lblStatus.TabIndex = 36;
@@ -247,7 +247,7 @@
             // rbWorking
             // 
             this.rbWorking.AutoSize = true;
-            this.rbWorking.Location = new System.Drawing.Point(131, 353);
+            this.rbWorking.Location = new System.Drawing.Point(132, 409);
             this.rbWorking.Name = "rbWorking";
             this.rbWorking.Size = new System.Drawing.Size(65, 17);
             this.rbWorking.TabIndex = 37;
@@ -259,7 +259,7 @@
             // rbOnRepair
             // 
             this.rbOnRepair.AutoSize = true;
-            this.rbOnRepair.Location = new System.Drawing.Point(131, 376);
+            this.rbOnRepair.Location = new System.Drawing.Point(132, 432);
             this.rbOnRepair.Name = "rbOnRepair";
             this.rbOnRepair.Size = new System.Drawing.Size(68, 17);
             this.rbOnRepair.TabIndex = 38;
@@ -271,7 +271,7 @@
             // rbRetired
             // 
             this.rbRetired.AutoSize = true;
-            this.rbRetired.Location = new System.Drawing.Point(131, 399);
+            this.rbRetired.Location = new System.Drawing.Point(132, 455);
             this.rbRetired.Name = "rbRetired";
             this.rbRetired.Size = new System.Drawing.Size(59, 17);
             this.rbRetired.TabIndex = 39;
@@ -282,7 +282,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(184, 438);
+            this.btnCancel.Location = new System.Drawing.Point(185, 494);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(124, 23);
             this.btnCancel.TabIndex = 40;
@@ -293,7 +293,7 @@
             // lblSelectedStatus
             // 
             this.lblSelectedStatus.AutoSize = true;
-            this.lblSelectedStatus.Location = new System.Drawing.Point(218, 378);
+            this.lblSelectedStatus.Location = new System.Drawing.Point(219, 434);
             this.lblSelectedStatus.Name = "lblSelectedStatus";
             this.lblSelectedStatus.Size = new System.Drawing.Size(0, 13);
             this.lblSelectedStatus.TabIndex = 41;
@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(372, 473);
+            this.ClientSize = new System.Drawing.Size(388, 533);
             this.Controls.Add(this.lblSelectedStatus);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.rbRetired);

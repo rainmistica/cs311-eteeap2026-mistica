@@ -22,7 +22,30 @@ namespace cs311_eteeap2026_mistica
             ThemeManager.Apply(this);
         }
         Class1 login = new Class1("127.0.0.1", "itc127-eteeap2026-mistica", "root","");
-        private void btnLogin_Click(object sender, EventArgs e)
+
+        private void cbShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbShow.Checked) 
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -32,7 +55,7 @@ namespace cs311_eteeap2026_mistica
                     var mainform = new frmMain(txtUsername.Text, dt.Rows[0].Field<string>("usertype"));
                     this.Hide();
                     mainform.ShowDialog();
-                    
+
                 }
                 else
                 {
@@ -48,33 +71,11 @@ namespace cs311_eteeap2026_mistica
             }
         }
 
-        private void cbShow_CheckedChanged(object sender, EventArgs e)
-        {
-            if(cbShow.Checked) 
-            {
-                txtPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                txtPassword.PasswordChar = '*';
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnClear_Click_1(object sender, EventArgs e)
         {
             txtUsername.Clear();
             txtPassword.Clear();
             txtUsername.Focus();
-        }
-
-        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

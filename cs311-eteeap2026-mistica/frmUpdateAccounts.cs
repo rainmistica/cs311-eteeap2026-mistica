@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using ticket_management;
 
 namespace cs311_eteeap2026_mistica
 {
-    public partial class frmUpdateAccounts : Form
+    public partial class frmUpdateAccounts : MaterialForm
     {
         private string editusername, editpassword, editusertype, editstatus, username;
         private int errorcount;
@@ -26,6 +27,7 @@ namespace cs311_eteeap2026_mistica
             this.editusertype = editusertype;
             this.editstatus = editstatus;
             this.username = username;
+            ThemeManager.Apply(this);
         }
 
         private void frmUpdateAccounts_Load(object sender, EventArgs e)

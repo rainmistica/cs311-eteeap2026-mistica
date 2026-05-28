@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 using ticket_management;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace cs311_eteeap2026_mistica
 {
-    public partial class frmAddAccounts : Form
+    public partial class frmAddAccounts : MaterialForm
     {
         private string username;
         private int errorcount;
@@ -21,6 +22,7 @@ namespace cs311_eteeap2026_mistica
         {
             InitializeComponent();
             this.username = username;
+            ThemeManager.Apply(this);
         }
 
         private void btnadd_Click(object sender, EventArgs e)
